@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Повторение с помощью функций setTimeout</title>
+    <script>
+        var k=1;
+        function ref() {
+            k=6;
+        }
+        function succpict() {
+            var d= document;
+            if (k<=5) {
+                if (k==1) {d.mypict.src="https://i.pinimg.com/originals/c3/1c/02/c31c02d4fa2725160af865227c994295.jpg"; k++;}
+                else if(k==2) {d.mypict.src="https://i.pinimg.com/736x/1e/5e/f0/1e5ef09e42ad95bfbcae48253525d1a9.jpg"; k++;}
+                else if(k==3) {d.mypict.src="https://i.pinimg.com/736x/fd/82/c1/fd82c1a0ae38796ba5f2730a1e4070fd.jpg"; k++;}
+                else if(k==4) {d.mypict.src="https://avatars.mds.yandex.net/i?id=6b6dd7f59dcba62becf104a1410a97bd_l-5577247-images-thumbs&n=13";k++;}
+                else if(k==5) {d.mypict.src="https://avatars.mds.yandex.net/i?id=6e7e56ce3f91bcdc3a3e81c80744e2ab_l-5250028-images-thumbs&n=13";k=1;}
+            setTimeout("succpict()",2000);
+            }
+        }
+    </script>
+</head>
+<body onload="succpict()">
+    <p>Просмотр рисунков</p>
+    <img src="https://i.pinimg.com/originals/c3/1c/02/c31c02d4fa2725160af865227c994295.jpg" name="mypict" width="100">
+    <form>
+    <input type="reset" value="Остановить" onclick='ref();'>
+    <input type="button" value="Начать снова" onclick="k=1; succpict();">
+</form>
+</body>
+</html>

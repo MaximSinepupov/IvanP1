@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Нумерованный список</p>
+    <ol id="ordlist">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+<script>
+    //ищем тег ol
+    olist=document.getElementById('ordlist')
+    document.write('родительский элемент тега '+olist.parentElement.nodeName+'<br>');
+    document.write('дочерний элемент'+olist.children[0].nodeName+'<br>' );
+    document.write('первый дочерний элемент'+olist.firstElementChild.nodeName+'<br>');
+    document.write('последний дочерний элемент'+olist.lastElementChild.nodeName+'<br>');
+    document.write('предыдущий сестренский элемент'+olist.previousElementSibling.nodeName+'<br>');
+    document.write('последующий сестренский элемент'+olist.nextElementSibling.nodeName+'<br>');
+</script>
+</body>
+
+</html>

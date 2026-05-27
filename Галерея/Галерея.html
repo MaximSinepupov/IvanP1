@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image:url(https://avatars.mds.yandex.net/i?id=045cee744be14095182289c513df15fe_l-4819767-images-thumbs&n=13);background-size: cover; 
+background-repeat: no-repeat;
+background-attachment: fixed; 
+ background-position: center center;
+ margin:0;">
+    <script>
+        //массив с изображениями
+        width="center"
+        height="center"
+        var array= new Array(
+            "фото 1.jpg",
+            "фото 2.jpg",
+           "фото 3.jpg"
+        );
+        var i=0;
+        //функция для смены изображения влево
+        function left() {
+            var image = document.getElementById("rotatorbutton");
+            i--;
+            if (i<0) i=array.length-1;
+            image.src=array[i];
+        }
+        //функция для смены изображений вправо
+        function right() {
+            var image= document. getElementById("rotatorbutton");
+            i++;
+            if (i==array.length) i=0;
+            image.src=array[i];
+        }
+    </script>  
+    
+    <body>
+        <center>
+        </center>
+        <table align="center">
+            <tr>
+                <td>
+                    <!--Кнопка смены изображений влево,т.е назад-->
+                    <input type="button" name="left" value ='<' onclick="left()"/>
+                </td>
+                <td>
+                   <!--вывести через скрипт изображение из массива с указанными размерами--> 
+                   <script>
+                    document.write("<img id='rotatorbutton' src='фото 1.jpg'"+ array[0]+"'width='200' height='200'/>");
+                   </script>
+                </td>
+                <td>
+                    <!--Кнопка смены изображений вправо,т.е вперед-->
+                    <input type="button" name="right" value='>' onclick="right()" />
+                </td>
+            </tr>
+        </table>
+</body>
+</html>

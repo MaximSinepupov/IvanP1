@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разработка сценариев с использованием массивов</title>
+</head>
+<body>
+    Исходный массив: 'веб-дизайн','математика','программирование','русский язык','литература','химия'
+    <br>
+    <br>
+    <script>
+        var c=prompt('Введите первый элемент массива', '');
+        var e=prompt('Введите второй элемент массива', '');
+        var r=prompt('Введите третий элемент массива', '');
+        var t=prompt('Введите четвёртый элемент массива', '');
+        var y=prompt('Введите пятый элемент массива', '');
+        var b=['веб-дизайн','математика','программирование','русский язык','литература','химия'];
+        var arr1=b.concat(c,e,r,t,y);
+        document.write ('Полученный массив: ' + arr1 + '<br>' + '<br>');
+        arr2=b.sort();
+        document.write ('Отсортированный массив: ' + arr2 + '<br>' + '<br>');
+        arr3=b.join('/');
+        document.write ('Разделённый массив: ' + arr3 +'<br>' + '<br>');
+        arr4=b.length;
+        document.write ('Длинна массива состовляет: ' + arr4);
+    </script>
+</body>
+</html>

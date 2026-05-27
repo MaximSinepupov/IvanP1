@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прямоугольный треугольник</title>
+</head>
+<body>
+    <h1> Практическая работа №1 
+        Вычисление гипотенузы и площади прямоугольного треугольника
+    </h1>
+    <h2> Выполнили студентки 3 курса группы "Г" Иванцова Анастасия и Радова Кристина</h2>
+катет 1 = <i id="kat1"></i> <br>
+Катет 2 = <i id="kat2"></i> <br>
+гипотенуза =<b id="gip"></b> <br>
+Площадь = <b id="pl"></b> <br>
+<script>
+var a;//катет1
+var b;//катет2
+var c;//гипотенуза
+var s;//площадь
+ a=prompt ("Введите длину первого катета", '');
+ b=prompt ("Введите длину второго катета", '');
+ c=Math.round(Math.sqrt(Math.pow(a,2)+Math.pow(b,2)));
+ s=(a*b)/2;
+ document.getElementById("kat1").innerHTML=a;
+ document.getElementById("kat2").innerHTML=b;
+ document.getElementById("gip").innerHTML=c;
+ document.getElementById("pl").innerHTML=s;
+</script>
+</body>
+</html>

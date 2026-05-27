@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смена изображения</title>
+</head>
+<body>
+    <script>
+        var a=0;
+        function changeimg(){
+            if (a==0){
+                document.img.src="https://img.goodfon.com/original/800x480/1/5e/park-derevya-osen-1893.jpg "
+                
+                a=1;
+            }
+            else{
+                document.img.src="https://stihi.ru/pics/2012/08/12/1710.jpg" ;
+                a=0;
+            }
+        }
+    </script>
+    <button onclick="changeimg()">Сменить изображение</button>
+    <br>
+    <img name="img" src="https://img.goodfon.com/original/800x480/1/5e/park-derevya-osen-1893.jpg"/>
+</body>
+</html>

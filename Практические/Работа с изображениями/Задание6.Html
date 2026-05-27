@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простейшая галерея изображений</title>
+
+<script>
+    //массив с изображениями
+    var array= new Array(
+        "https://i.pinimg.com/736x/7d/61/1a/7d611a6d6d90850da497895850f0a99c.jpg",
+        "https://i.pinimg.com/736x/cd/d9/a8/cdd9a8ac3dda7c39d969d385d74aa0f4.jpg",
+        "https://avatars.mds.yandex.net/i?id=c12a51550537a862ab86be1cdf48737b_l-4628144-images-thumbs&n=13"
+    );
+    var i=0;
+    //функция для смены изображения влево
+    function left() {
+        var image = document.getElementById("rotatorbutton");
+        i--;
+        if (i<0) i=array.length-1;
+        image.src=array[i];
+    }
+    //функция для смены изображений вправо
+    function right() {
+        var image= document. getElementById("rotatorbutton");
+        i++;
+        if (i==array.length) i=0;
+        image.src=array[i];
+    }
+</script>  
+
+<body>
+    <center>
+        <h2>Простейшая галерея изображений</h2>
+    </center>
+    <table align="center">
+        <tr>
+            <td>
+                <!--Кнопка смены изображений влево,т.е назад-->
+                <input type="button" name="left" value ='<' onclick="left()"/>
+            </td>
+            <td>
+               <!--вывести через скрипт изображение из массива с указанными размерами--> 
+               <script>
+                document.write("<img id='rotatorbutton' src='"+ array[0]+"'width='200' height='200'/>");
+               </script>
+            </td>
+            <td>
+                <!--Кнопка смены изображений вправо,т.е вперед-->
+                <input type="button" name="right" value='>' onclick="right()" />
+            </td>
+        </tr>
+    </table>
+    </head>
+</body>
+</html>
